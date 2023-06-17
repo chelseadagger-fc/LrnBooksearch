@@ -1,34 +1,13 @@
-import { useState } from 'react';
-import Alert from './components/Alert';
-import InfoButton from './components/InfoButton'
-import 'bootstrap/dist/css/bootstrap.css'
 
+import Like from "./components/Like";
 
-export default function App() {
-  const [isVisible, setVisibility] = useState(false);
-  
-  const showAlert = () => {
-    setVisibility(true);
-  }
-
-  const hideAlert = () => {
-    setVisibility(false);
-  }
+function App() {
 
   return (
-      <div>
-        {
-          isVisible && <Alert 
-          children="This is the alert."
-          onClick={hideAlert} />
-        }
-
-        <InfoButton 
-        color="info" 
-        onClick={showAlert} 
-        children="Click for Information" />
-
-
-      </div>
-    );
+    <div>
+      <Like onClick={() => console.log("clicked")}/>
+    </div>
+  )
 }
+
+export default App;
