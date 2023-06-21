@@ -1,8 +1,7 @@
 interface Props {
     children: string;
     color?: string;
-    onClick: () => void;
-}
+    onClick: () => void; }
 
 
 const InfoButton = ({children, onClick, color}: Props) => {
